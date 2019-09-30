@@ -4,6 +4,8 @@
 
 This project builds and deploys the [Dynatrace easyTravel](https://community.dynatrace.com/community/display/DL/Demo+Applications+-+easyTravel) demo application on [Openshift](https://www.openshift.io/), and uses [Ansible Tower](https://www.ansible.com/) to remidiate any issues with the project when it is all setup and running.
 
+Note: This is still a work in progress.
+
 ## Project  Components
 
 | Component          | Description
