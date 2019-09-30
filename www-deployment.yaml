@@ -1,0 +1,33 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.18.0 ()
+  creationTimestamp: null
+  labels:
+    io.kompose.service: www
+  name: www
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: www
+    spec:
+      containers:
+      - env:
+        - name: ET_BACKEND_LOCATION
+          value: backend:8080
+        - name: ET_FRONTEND_LOCATION
+          value: frontend:8080
+        image: dynatrace/easytravel-nginx
+        name: www
+        ports:
+        - containerPort: 80
+        resources: {}
+      hostname: easytravel-www
+      restartPolicy: Always
+status: {}
