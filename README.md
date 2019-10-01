@@ -13,6 +13,8 @@ What we are going to do through this project is:
 * Install Ansible Tower on Openshift
 * Monitor the easyTravel web app, detect any issues and fix them automatically with Ansible Tower.
 
+Note: This is still a work in progress.
+
 ## Project  Components
 
 | Component          | Description
